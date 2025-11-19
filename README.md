@@ -32,7 +32,7 @@ conda env create -f Conda_Env_HmNld.yml
 Once the installation is complete activate the environment:
 
 ```bash
-conda activate Par_gen
+conda activate HNaledi
 ```
 
 <br/><br/>
