@@ -1,4 +1,4 @@
-# Code_for_Genetic_Diversity_SAmpling
+# Code for Genetic Diversity Sampling
 
 Here you will find a step-bystep description on how to re-run the 'genetic variation' analysis, as described in Madupe et al 2025.
 The results and details of the analysis are described in the supplementary of the same paper.
