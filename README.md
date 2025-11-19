@@ -66,7 +66,7 @@ bcftools index 1000_Genomes_Merged_All.vcf.gz
 **~ This should take a while ~**
 You can also try speeding it up using more threads (if your computer has them)
 ```
--bcftools concat -f To_Merge.txt **-threads 16 **-O z -o 1000_Genomes_Merged_All.vcf.gz 
+-bcftools concat -f To_Merge.txt -threads 16 -O z -o 1000_Genomes_Merged_All.vcf.gz 
 ```
 
 Then we want to split this folder into individual-populations folders (1 VCF containing all individuals belonging to 1 population). For this first we need to find how many and which populations there are, and to which population each sample belongs to. Luckily for us here, this has already been done (using a python script named **Extract_Specific_Populations_From_1000_Genomes.py** in combination with a .tsv file with all the necessary information named **igsr_samples.tsv**). So inside the **1000_Genomes_Data** folder, you will find one **XXX_samples.txt** file for each population, which contains the ID of all samples belonging to that population.
