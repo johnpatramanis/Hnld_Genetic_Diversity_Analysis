@@ -69,6 +69,12 @@ Then we want to split this folder into individual-populations folders (1 VCF con
 bash SubSample.sh
 ```
 
+This should create a number of VCF files named **POP_ALL_CHROMOSOMES.vcf.gz** where POP is the 3 letter population name of a 1000 Genomes population. At this point we can also delete the original downloaded data, since we don't really need them in that format (but you should keep them if you want to repeat this analysis more than once).
+
+```
+rm -rf CCDG_*
+```
+
 
 Finally the correct version of the VEP cache needs to be downloaded and placed in a folder path "VEP_Cache/homo_sapiens/" within the main directory of this workflow.
 Download Cache from: https://ftp.ensembl.org/pub/release-109/variation/vep/homo_sapiens_vep_109_GRCh38.tar.gz using:
