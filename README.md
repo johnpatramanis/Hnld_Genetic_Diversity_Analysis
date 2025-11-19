@@ -35,7 +35,7 @@ conda create -n HNaledi -c conda-forge -c bioconda  openssl=1.1 samtools bcftool
 ```
 
 
-Either of the above commands will create a conda environment which contains all of the necessary prerequisites. Once the installation is complete activate the environment:
+Either of the above commands will create a new conda environment in your computer, named "HNaledi", which contains all of the necessary prerequisites for this analysis. Now activate this environment with:
 
 ```bash
 conda activate HNaledi
