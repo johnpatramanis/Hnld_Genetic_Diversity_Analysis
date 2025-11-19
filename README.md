@@ -8,7 +8,7 @@ The results and details of the analysis are described in the supplementary of th
 ## Requirements
 A computer, personal or server, that is running Linux with python3 with [biopython](https://biopython.org/), [bcftools](https://samtools.github.io/bcftools/bcftools.html), [vcftools](https://vcftools.sourceforge.net/) and ensembl's [VEP](https://www.ensembl.org/info/docs/tools/vep/index.html) installed.
 All required tools can be installed through [Conda](https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html), and the exact environment used is also provided as [YAML](https://en.wikipedia.org/wiki/YAML) file (see below).
-Additionally around 
+Additionally around X Gb of free memory
 
 <br/><br/>
 <br/><br/>
@@ -54,6 +54,7 @@ Now we need some VCF files for this analysis. If you want to run the analysis fo
 cd 1000_Genomes_Data
 bash Download_Data.sh
 ```
+**~ This should take a while ~**
 
 This will download 23 VCF files (and their 23 .tbi file), one for each chromosome. Now we need to merge them together into one:
 
@@ -61,6 +62,11 @@ This will download 23 VCF files (and their 23 .tbi file), one for each chromosom
 ls *.vcf.gz > To_Merge.txt
 bcftools concat -f To_Merge.txt -O z -o 1000_Genomes_Merged_All.vcf.gz
 bcftools index 1000_Genomes_Merged_All.vcf.gz
+```
+**~ This should take a while ~**
+You can also try speeding it up using more threads (if your computer has them)
+```
+-bcftools concat -f To_Merge.txt **-threads 16 **-O z -o 1000_Genomes_Merged_All.vcf.gz 
 ```
 
 Then we want to split this folder into individual-populations folders (1 VCF containing all individuals belonging to 1 population). For this first we need to find how many and which populations there are, and to which population each sample belongs to. Luckily for us here, this has already been done (using a python script named **Extract_Specific_Populations_From_1000_Genomes.py** in combination with a .tsv file with all the necessary information named **igsr_samples.tsv**). So inside the **1000_Genomes_Data** folder, you will find one **XXX_samples.txt** file for each population, which contains the ID of all samples belonging to that population.
