@@ -59,22 +59,16 @@ This will download 23 VCF files (and their 23 .tbi file), one for each chromosom
 
 ```
 ls *.vcf.gz > To_Merge.txt
-bcftools concat -f To_Merge.txt -O z -o 1000_Genomes_Merged_All
+bcftools concat -f To_Merge.txt -O z -o 1000_Genomes_Merged_All.vcf.gz
+bcftools index 1000_Genomes_Merged_All.vcf.gz
 ```
 
 Then we want to split this folder into individual-populations folders (1 VCF containing all individuals belonging to 1 population). For this first we need to find how many and which populations there are, and to which population each sample belongs to. Luckily for us here, this has already been done (using a python script named **Extract_Specific_Populations_From_1000_Genomes.py** in combination with a .tsv file with all the necessary information named **igsr_samples.tsv**). So inside the **1000_Genomes_Data** folder, you will find one **XXX_samples.txt** file for each population, which contains the ID of all samples belonging to that population.
 
-Alternatively, any GRCh38 vcf file should work, for example:
-https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg
-You only need to download the relevant chromosomes. In our case these would be 3, 4, 1, 11, 17, X and Y.
-
-Once you've downloaded them you need to merge them together using:
-
-```bash
-ls gnomad.genomes.v3.1.2.hgdp_tgp.chr*.vcf.bgz > GNOMAD_CHROMOSOME_FILES
-bcftools concat -f GNOMAD_CHROMOSOME_FILES -o gnomad.genomes_3_4_10_11_17_X_Y.vcf.bgz
-bcftools index gnomad.genomes_3_4_10_11_17_X_Y.vcf.bgz
 ```
+bash SubSample.sh
+```
+
 
 Finally the correct version of the VEP cache needs to be downloaded and placed in a folder path "VEP_Cache/homo_sapiens/" within the main directory of this workflow.
 Download Cache from: https://ftp.ensembl.org/pub/release-109/variation/vep/homo_sapiens_vep_109_GRCh38.tar.gz using:
