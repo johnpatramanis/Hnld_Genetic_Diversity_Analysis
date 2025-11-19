@@ -48,7 +48,9 @@ conda activate HNaledi
 ## File preparation and set up
 
 
-The we need some VCF files for this analysis. If you want to run the analysis for the same dataset as we did in our manuscript, you must use the VCF files from here:
+Now we need some VCF files for this analysis. If you want to run the analysis for the same dataset as we did in our manuscript, you must use the VCF files from the 1000 genomes project:
+
+Alternatively, any GRCh38 vcf file should work, for example:
 https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg
 You only need to download the relevant chromosomes. In our case these would be 3,4,1-,11,17,X and Y.
 
