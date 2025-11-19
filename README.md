@@ -51,14 +51,16 @@ conda activate HNaledi
 Now we need some VCF files for this analysis. If you want to run the analysis for the same dataset as we did in our manuscript, you must use the VCF files from the 1000 genomes project. First we need to download the 1000 Genomes VCF file, which contains information on all populations and store it in a folder named **1000_Genomes_Data**:
 ```
 cd 1000_Genomes_Data
-wget http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20201028_3202_phased/*.vcf.gz*
+bash Download_Data.sh
 ```
 
-This will download 23 VCF files (each with their .tbi file), which we need to merge into one:
+This will download 23 VCF files (and their 23 .tbi file), one for each chromosome. Now we need to merge them together into one:
 
 ```
-
+ls *.vcf.gz > To_Merge.txt
+bcftools concat -f To_Merge.txt -O z -o 1000_Genomes_Merged_All
 ```
+
 Then we want to split this folder into individual-populations folders (1 VCF containing all individuals belonging to 1 population). For this first we need to find how many and which populations there are, and to which population each sample belongs to. Luckily for us here, this has already been done (using a python script named **Extract_Specific_Populations_From_1000_Genomes.py** in combination with a .tsv file with all the necessary information named **igsr_samples.tsv**). So inside the **1000_Genomes_Data** folder, you will find one **XXX_samples.txt** file for each population, which contains the ID of all samples belonging to that population.
 
 Alternatively, any GRCh38 vcf file should work, for example:
