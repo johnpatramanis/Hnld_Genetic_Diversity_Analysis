@@ -15,21 +15,27 @@ All required tools can be installed through conda, and the exact environment use
 
 ## Download and Instalation
 
-The first thing we need to do is to Clone this repository to your local machine (your coputer or server). If you ahve Git installed:
-
+The first thing we need to do is to Clone this repository to your local machine (your coputer or server). If you have Git installed simply:
 
 ```bash
 git clone https://github.com/johnpatramanis/Code_for_Genetic_Diversity_Sampling.git
 ```
 
-Enter the repo and install the required conda environment (Requires conda to be installed: ) which contains all of the necessary prerequisites:
+
+Once the repository is copied, enter the folder and with conda installed and activated install the required **conda environment**. 
 
 ```bash
 cd Code_for_Genetic_Diversity_Sampling
 conda env create -f Conda_Env_HmNld.yml
 ```
+Alternatively, if the above method fails, you can also install the environment manually with the following command:
 
-Once the installation is complete activate the environment:
+```
+
+```
+
+
+Either of the above commands will create a conda environment which contains all of the necessary prerequisites. Once the installation is complete activate the environment:
 
 ```bash
 conda activate HNaledi
