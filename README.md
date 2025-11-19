@@ -31,7 +31,7 @@ conda env create -f Conda_Env_HmNld.yml
 Alternatively, if the above method fails, you can also install the environment manually with the following command:
 
 ```
-
+conda create -n HNaledi -c conda-forge -c bioconda  openssl=1.1 samtools bcftools biopython snakemake bioconductor-genomeinfodbdata ensembl-vep=108.0
 ```
 
 
