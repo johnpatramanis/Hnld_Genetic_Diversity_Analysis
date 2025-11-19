@@ -84,7 +84,10 @@ If you want any additional VCF files to go through the analysis, add the as new 
 
 Finally type:
 ```bash
-snakemake -j4 -F
+snakemake -j8 -F
 ```
 
 And the analysis will take place!
+
+
+## Plotting the results
