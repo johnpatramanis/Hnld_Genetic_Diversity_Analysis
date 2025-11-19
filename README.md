@@ -6,8 +6,8 @@ The results and details of the analysis are described in the supplementary of th
 <br/><br/>
 
 ## Requirements
-A computer, personal or server, that is running Linux with python3 with biopython, bcftools, vcftools and ensembl's VEP installed.
-All required tools can be installed through conda, and the exact environment used is also provided as .yml file (see below).
+A computer, personal or server, that is running Linux with python3 with [biopython](https://biopython.org/), [bcftools](https://samtools.github.io/bcftools/bcftools.html), [vcftools](https://vcftools.sourceforge.net/) and ensembl's [VEP](https://www.ensembl.org/info/docs/tools/vep/index.html) installed.
+All required tools can be installed through [Conda](https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html), and the exact environment used is also provided as [YAML](https://en.wikipedia.org/wiki/YAML) file (see below).
 
 <br/><br/>
 <br/><br/>
