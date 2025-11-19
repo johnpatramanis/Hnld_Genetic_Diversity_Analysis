@@ -1,15 +1,21 @@
 # Code_for_Genetic_Diversity_SAmpling
 
-How to re-run the 'genetic variation' analysis described in Madupe et al 2023
-The details of the analysis are described in the supplementary of the paper.
+Here you will find a step-bystep description on how to re-run the 'genetic variation' analysis, as described in Madupe et al 2025.
+The results and details of the analysis are described in the supplementary of the same paper.
 
 <br/><br/>
 <br/><br/>
 <br/><br/>
+## Requirements
+A computer (personal computer or server) running Linux with python3 with biopython, bcftools installed
+<br/><br/>
+<br/><br/>
+
 
 ## Download and Instalation
 
-First Clone this repository in your local computer:
+The first thing we need to do is to Clone this repository to your local machine (your coputer or server). If you ahve Git installed:
+
 
 ```bash
 git clone https://github.com/johnpatramanis/Code_for_Genetic_Diversity_Sampling.git
@@ -19,7 +25,7 @@ Enter the repo and install the required conda environment (Requires conda to be 
 
 ```bash
 cd Code_for_Genetic_Diversity_Sampling
-conda env create -f Paranth_Genet_Variat.yml
+conda env create -f Conda_Env_HmNld.yml
 ```
 
 Once the installation is complete activate the environment:
