@@ -52,7 +52,7 @@ Now we need some VCF files for this analysis. If you want to run the analysis fo
 
 Alternatively, any GRCh38 vcf file should work, for example:
 https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg
-You only need to download the relevant chromosomes. In our case these would be 3,4,1-,11,17,X and Y.
+You only need to download the relevant chromosomes. In our case these would be 3, 4, 1, 11, 17, X and Y.
 
 Once you've downloaded them you need to merge them together using:
 
