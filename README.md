@@ -4,13 +4,12 @@ Here you will find a step-bystep description on how to re-run the 'genetic varia
 The results and details of the analysis are described in the supplementary of the same paper.
 
 <br/><br/>
-<br/><br/>
-<br/><br/>
+
 ## Requirements
 A computer (personal computer or server) running Linux with python3 with biopython, bcftools installed
 <br/><br/>
 <br/><br/>
-
+<br/><br/>
 
 ## Download and Instalation
 
