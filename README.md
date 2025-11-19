@@ -6,7 +6,9 @@ The results and details of the analysis are described in the supplementary of th
 <br/><br/>
 
 ## Requirements
-A computer (personal computer or server) running Linux with python3 with biopython, bcftools installed
+A computer, personal or server, that is running Linux with python3 with biopython, bcftools, vcftools and ensembl's VEP installed.
+All required tools can be installed through conda, and the exact environment used is also provided as .yml file (see below).
+
 <br/><br/>
 <br/><br/>
 <br/><br/>
