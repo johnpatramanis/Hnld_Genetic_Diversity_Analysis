@@ -83,17 +83,18 @@ rm -rf CCDG_*
 
 
 Finally the correct version of the VEP cache needs to be downloaded and placed in a folder path "VEP_Cache/homo_sapiens/" within the main directory of this workflow.
-Download Cache from: https://ftp.ensembl.org/pub/release-109/variation/vep/homo_sapiens_vep_109_GRCh38.tar.gz using:
+Download Cache from: https://ftp.ensembl.org/pub/release-109/variation/vep/homo_sapiens_vep_109_GRCh38.tar.gz, unpack it, move it into a folder named VEP and then clean up the downloaded file using:
 
 ```bash
-mkdir -p VEP_Cache/hmo_sapiens
+mkdir -p VEP_Cache/homo_sapiens
 cd VEP_Cache/hmo_sapiens
 wget https://ftp.ensembl.org/pub/release-108/variation/vep/homo_sapiens_vep_108_GRCh38.tar.gz
-tar –xvzf  homo_sapiens_vep_108_GRCh38.tar.gz
+tar -xvzf homo_sapiens_vep_108_GRCh38.tar.gz
+mv homo_sapiens ./VEP_Cache/
+rm -rf homo_sapiens_vep_108_GRCh38.tar.gz
 ```
 
 Now all we need to do is set up which VCF sample to use by adding it in this file: Vcf_File_List.txt
-Simply add 'gnomad.genomes_3_4_10_11_17_X_Y.vcf.bgz' in the first line of the file
 If you want any additional VCF files to go through the analysis, add the as new lines below that one.
 
 <br/><br/>
