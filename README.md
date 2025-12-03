@@ -112,3 +112,10 @@ And the analysis will take place!
 
 
 ## Plotting the results
+
+To plot the results, first move all output files into the plotting folder. Then use the provided python script to generate the plots.
+```bash
+mv ./Output/* Plotting_Results/
+python3 Genetic_Metrics_Plotting.py
+```
+
